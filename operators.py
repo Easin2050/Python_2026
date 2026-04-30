@@ -78,7 +78,43 @@ print('on' in 'python' and 'on' in 'dragon')
 print('jargon' in 'I hope this course is not full of jargon')
 
 #15 
-print('on' not in 'python' and 'on' not in 'dragon')'''
+print('on' not in 'python' and 'on' not in 'dragon')
+
+#16
+length_of_word=len('python')
+x=float(length_of_word)
+y=str(x)
+print(f'x,y = {x},{y}')
+
+#17 even or odd
+number=int(input("Enter a number:"))
+if(number%2==0):
+    print(f"{number} is an even number.")
+
+#18
+
+if(7//3==int(2.7)):
+    print("True")
+
+#19
+print(type('10')==type(10))
+
+#20
+print(int(9.8)==10)
+#21
+
+hours=int(input("Enter hours:"))
+rate=int(input("Enter rate per hour:"))
+print("Your weekly earning is",hours*rate)
+
+#22
+year=input("Enter a year:")
+print(f"You have lived for {year*60*60*24*365} seconds.")'''
+
+#23
+print(f'1 1 1 1 1\n2 1 2 4 8\n3 1 3 9 27\n4 1 4 16 64\n5 1 5 25 125')
+
+
 
 
 
