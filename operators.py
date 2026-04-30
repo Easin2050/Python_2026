@@ -53,5 +53,33 @@ if y<slope:
 elif(slope>y):
     print("The slope of the line in task 8 is greater thn the slope of the line in task 9.")
 else:
-    print("The slope of the line in task 8 is equal to the slope of the line in task 9.")'''
+    print("The slope of the line in task 8 is equal to the slope of the line in task 9.")
+
+#11 Find the value of x
+a = 1
+b = 6
+c = 9
+
+d = b*b - 4*a*c
+
+if d == 0:
+    x = -b / (2*a)
+    print(f"The value of x is {x}")
+
+#12 Find the length of strings
+
+print(len("python")==len("dragon"))
+
+#13 Check on in python
+print('on' in 'python' and 'on' in 'dragon')
+
+#14 Use of in
+
+print('jargon' in 'I hope this course is not full of jargon')
+
+#15 
+print('on' not in 'python' and 'on' not in 'dragon')'''
+
+
+
 
