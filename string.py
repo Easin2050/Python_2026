@@ -88,3 +88,66 @@ print(company.swapcase())
 #9 Cut(slice) out the first word of Coding For All string.
 print(company[6:])
 
+#10 Check coding is there or not
+print(company.find('Coding'))
+
+sub_string='Coding'
+print(company.index(sub_string))
+
+#11 Replace the word coding in the string 'Coding For All' to Python.
+print(company.replace('Coding','Python'))
+
+#12 Change "Python for Everyone" to "Python for All" using the replace method or other methods.
+sentence='Python for Everyone'
+print(sentence.replace('Everyone','All'))
+
+#13 Split the string 'Coding For All' using space as the separator (split()) .
+print(company.split(' '))
+
+#14 "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon" split the string at the comma.
+
+string2='Facebook,Google,Microsoft,Apple,IBM,Oracle,Amazon'
+string_split=string2.split(',')
+print(string_split)
+
+#15 What is the character at index 0 in the string Coding For All.
+print(company[0])
+
+#16 What is the last index of the string Coding For All.
+print(len(company)-1)
+
+#17 What character is at index 10 in "Coding For All" string.
+print(company[10])
+
+#18 Create an acronym or an abbreviation for the name 'Python For Everyone'.
+
+string3='Python For Everyone'
+acronym=''
+for word in string3.split(' '):
+    acronym+=word[0]
+print(acronym)
+
+#19 Create an acronym or an abbreviation for the name 'Coding For All'.
+
+short=''
+for word in company.split(' '):
+    short+=word[0]
+print(short)
+
+#20 Use index to determine the position of the first occurrence of C in Coding For All.
+print(company.index('C'))
+
+#21 Use index to determine the position of the first occurrence of F in Coding For All.
+print(company.index('F'))
+
+#22 Use rfind to determine the position of the last occurrence of l in Coding For All People.
+print(company.rfind('l'))
+
+#23 Use index or find to find the position of the first occurrence of the word 'because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
+sentence2='You cannot end a sentence with because because because is a conjunction'
+print(sentence2.find('because'))
+
+#24 Use rindex to find the position of the last occurrence of the word because in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
+print(sentence2.rindex('because'))
+
+ 
