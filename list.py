@@ -92,3 +92,14 @@ print(it_companies)
 #8 Print the number of companies in the list
 print(len(it_companies))
 #9 Print the first, middle and last company
+
+print(it_companies[0])
+print(it_companies[len(it_companies)//2])
+print(it_companies[-1])
+
+#10 Print the list after modifying one of the companies
+it_companies[0]='Meta'
+print(it_companies)
+#11 Add an IT company to it_companies
+it_companies.append('Tesla')
+print(it_companies)
