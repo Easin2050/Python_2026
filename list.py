@@ -180,3 +180,11 @@ print(median)
 #5 Find the average age (sum of all items divided by their number )
 average=sum(ages)/len(ages)
 print(average)
+#6 Find the range of the ages (max minus min)
+age_range=ages_sorted[-1]-ages_sorted[0]    
+print(age_range)
+#7 Compare the value of (min - average) and (max - average), use abs() method
+min_average_diff=abs(ages_sorted[0]-average)
+max_average_diff=abs(ages_sorted[-1]-average)
+print(min_average_diff)
+print(max_average_diff)
