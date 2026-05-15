@@ -188,3 +188,29 @@ min_average_diff=abs(ages_sorted[0]-average)
 max_average_diff=abs(ages_sorted[-1]-average)
 print(min_average_diff)
 print(max_average_diff)
+#8 Find the middle country(ies) in the countries list
+countries=['China','Pakistan','Bangladesh','Russia','Japan','Finland','USA']
+n=len(countries)
+if n%2==0:
+    middle_countries=countries[n//2-1:n//2+1]
+else:
+    middle_countries=[countries[n//2]]
+print(middle_countries)
+
+#9 Divide the countries list into two equal lists if it is even if not one more country for the first half.
+n=len(countries)
+if n%2==0:
+    first_half=countries[0:n//2]
+    second_half=countries[n//2:]
+else:
+    first_half=countries[0:(n//2)+1]
+    second_half=countries[(n//2)+1:]
+print(first_half)
+print(second_half)
+#10 ['China', 'Russia', 'USA', 'Finland', 'Sweden', 'Norway', 'Denmark']. Unpack the first three countries and the rest as scandic coutries
+countries=['China', 'Russia', 'USA', 'Finland', 'Sweden', 'Norway', 'Denmark']
+a,b,c,*scandic=countries
+print(f'{a},{b},{c}')
+print(scandic)
+
+
