@@ -51,3 +51,14 @@ print(B)
 print(A.symmetric_difference(B))
 #Delete the sets completely
 del A
+#Exercises: Level 3
+#Convert the ages to a set and compare the length of the list and the set, which one is bigger?
+ages = [22, 19, 24, 25, 26, 24, 25, 24]
+ages_set=set(ages)
+print(len(ages))
+print(len(ages_set))
+#I am a teacher and I love to inspire and teach people. How many unique words have been used in the sentence? Use the split methods and set to get the unique words.'''
+sentence='I am a techer and I love to inspire and teach people'
+unique_word=set(sentence.split(' '))
+print(unique_word)
+
