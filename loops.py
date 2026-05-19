@@ -163,3 +163,20 @@ for i in range(101):
     if i%2!=0:
         print(i,end=',')
 print()
+
+#9
+sum=0
+for i in range(101):
+    sum=sum+i
+print(sum)
+
+#10
+even_sum=0
+odd_sum=0
+for i in range(101):
+    if i%2==0:
+        even_sum=even_sum+i
+    else:
+        odd_sum=odd_sum+i
+print(f'The sum of all evens is {even_sum}')
+print(f'The sum of all odd is {odd_sum}')
