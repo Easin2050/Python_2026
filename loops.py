@@ -180,3 +180,75 @@ for i in range(101):
         odd_sum=odd_sum+i
 print(f'The sum of all evens is {even_sum}')
 print(f'The sum of all odd is {odd_sum}')
+
+#11
+import csv
+with open('countries.csv',mode='r')as file:
+    csvFile=csv.reader(file)
+    for lines in csvFile:
+        if 'land' in lines[0]:
+            print(lines[0],end=',')
+
+print()
+
+
+#12 
+list=['banana','orange','mango','lemon']
+n=len(list)
+while(n!=0):
+    print(list[n-1],end=',')
+    n=n-1
+print()
+#13 
+import csv
+
+count = 0
+
+with open('countries.csv', mode='r') as file:
+    csvFile = csv.reader(file)
+
+    next(csvFile)  
+
+    for row in csvFile:
+        country = row[0].strip().replace(']', '').replace(';', '')
+        count=count+1
+
+print(count)
+
+#14
+import json
+
+with open('countries-data.json', 'r', encoding='utf-8') as file:
+    data = json.load(file)
+
+language_count={}
+
+for country in data:
+    for language in country['languages']:
+        if language in language_count:
+            language_count[language]+=1
+        else:
+            language_count[language]=1
+value=language_count.values()
+sorted_list=sorted(value)
+reversed_list=sorted_list[::-1]
+
+for i in range(10):
+    print(reversed_list[i],end=',')
+print()
+#
+import json
+
+with open('countries-data.json', 'r', encoding='utf-8') as file:
+    data = json.load(file)
+
+population_list = []
+
+for country in data:
+    population_list.append(country['population'])
+
+sorted_population=sorted(population_list)
+reversed_population=sorted_population[::-1]
+
+for i in range(10):
+    print(reversed_population[i],end=',')
