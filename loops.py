@@ -146,4 +146,20 @@ for i in range(row+1):
 #5
 for i in range(11):
     print(f'{i}x{i}={i*i}')
+
+#6 
+list=['Python','Numpy','Pandas','Flusk']
+
+for i in range(len(list)):
+    print(list[i],end=',')
+print()
+#7
+for i in range(101):
+    if i%2==0:
+        print(i,end=',')
+print()
+#8
+for i in range(101):
+    if i%2!=0:
+        print(i,end=',')
 print()
