@@ -21,11 +21,9 @@ print(f'Area of the circle:{area(5):.2f}')
 def add_all_numbers(*args):
     total=0
     for i in args:
-        if type(i)!='int' or type(i)!='float' or type(i)!='double':
-            print('Not all elements are numbers')
-            exit()
-        else:
-            total+=i
+        if type(i)!=int and type(i)!=float:
+            return 'Not all elements are numbers'        
+        total+=i
     return total
 
-print(add_all_numbers(1,3,5,7,'hello',10))
+print(add_all_numbers(1,3,5,7,2.35,10))
