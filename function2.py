@@ -83,11 +83,26 @@ c=int(c)
 roots=quadratic_equation(a,b,c)
 print('The roots are {roots[0]} and {roots[1]}')'''
 
-#Declare a function named print_list. It takes a list as a parameter and it prints out each element of the list.
+#8 Declare a function named print_list. It takes a list as a parameter and it prints out each element of the list.
 
-def list_print(list_values):
+'''def list_print(list_values):
     for items in list_values:
         print(items,end=',')
 
-list_values=input(('Enter the values using comma: ')).split(',')
-list_print(list_values)
+list_values=('Enter the values using comma: ').split(',')
+list_print(list_values)'''
+
+#9 Declare a function named reverse_list. It takes an array as a parameter and it returns the reverse of the array (use loops).
+
+def list_print(list_values):
+    new_list = []
+    n = len(list_values)
+
+    for i in range(n - 1, -1, -1):
+        new_list.append(list_values[i])
+
+    return new_list
+
+
+list_values = input("Enter the values using comma: ").split(',')
+print(list_print(list_values))
