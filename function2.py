@@ -94,7 +94,7 @@ list_print(list_values)'''
 
 #9 Declare a function named reverse_list. It takes an array as a parameter and it returns the reverse of the array (use loops).
 
-def list_print(list_values):
+'''def list_print(list_values):
     new_list = []
     n = len(list_values)
 
@@ -105,4 +105,29 @@ def list_print(list_values):
 
 
 list_values = input("Enter the values using comma: ").split(',')
-print(list_print(list_values))
+print(list_print(list_values))'''
+
+# Declare a function named capitalize_list_items. It takes a list as a parameter and it returns a capitalized list of items
+
+'''def capitalize_list_items(user_list):
+    cap_list=[]
+    for items in user_list:
+        after_cap=items.capitalize()
+        cap_list.append(after_cap)
+    return(cap_list)
+
+user_list = input("Enter items separated by spaces: ").split(',')
+print(capitalize_list_items(user_list))'''
+
+# Declare a function named add_item. It takes a list and an item parameters. It returns a list with the item added at the end.
+
+def add_items(user_list,element):
+    list=[]
+    for items in user_list:
+        list.append(items)
+    list.insert(len(user_list),element)
+
+    return list
+user_list = input("Enter items separated by spaces: ").split(',')
+element=input('Enter the element to add: ')
+print(add_items(user_list,element))
