@@ -66,7 +66,7 @@ print(calculate_slope(a,b,c,d))'''
 
 # Quadratic equation is calculated as follows: ax² + bx + c = 0. Write a function which calculates solution set of a quadratic equation, solve_quadratic_eqn.
 
-import math
+'''import math
 
 def quadratic_equation(a,b,c):
     d=(b**2)-4*a*c
@@ -81,4 +81,13 @@ a=int(a)
 b=int(b)
 c=int(c)
 roots=quadratic_equation(a,b,c)
-print('The roots are {roots[0]} and {roots[1]}')
+print('The roots are {roots[0]} and {roots[1]}')'''
+
+#Declare a function named print_list. It takes a list as a parameter and it prints out each element of the list.
+
+def list_print(list_values):
+    for items in list_values:
+        print(items,end=',')
+
+list_values=input(('Enter the values using comma: ')).split(',')
+list_print(list_values)
