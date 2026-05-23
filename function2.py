@@ -121,7 +121,7 @@ print(capitalize_list_items(user_list))'''
 
 # Declare a function named add_item. It takes a list and an item parameters. It returns a list with the item added at the end.
 
-def add_items(user_list,element):
+'''def add_items(user_list,element):
     list=[]
     for items in user_list:
         list.append(items)
@@ -130,4 +130,31 @@ def add_items(user_list,element):
     return list
 user_list = input("Enter items separated by spaces: ").split(',')
 element=input('Enter the element to add: ')
-print(add_items(user_list,element))
+print(add_items(user_list,element))'''
+
+# Declare a function named remove_item. It takes a list and an item parameters. It returns a list with the item removed from it.
+
+'''def remove_item(user_list,element):
+    user_list.remove(element)
+    return user_list
+
+
+user_list = input("Enter items separated by spaces: ").split(',')
+element=input('Enter the perameter to remove: ')
+
+if element not in user_list:
+    print('The element not in the list.')
+else:
+    print(remove_item(user_list,element))'''
+
+# Declare a function named sum_of_numbers. It takes a number parameter and it adds all the numbers in that range.
+
+def sum_of_numbers(number):
+    sum=0
+    for i in range(number):
+        sum=sum+i
+    return sum
+
+
+print(sum_of_numbers(5))
+
