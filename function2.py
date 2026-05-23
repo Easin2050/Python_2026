@@ -171,7 +171,7 @@ num=input('Enter the number perameter: ')
 print(sum_of_odds(int(num)))'''
 
 # Declare a function named sum_of_even. It takes a number parameter and it adds all the even numbers in that - range.
-def sum_of_even(r):
+'''def sum_of_even(r):
     sum=0
     for i in range(r):
         if i%2==0:
@@ -180,4 +180,35 @@ def sum_of_even(r):
     return sum
 
 num=input('Enter the number perameter: ')
-print(sum_of_even(int(num)))
+print(sum_of_even(int(num)))'''
+
+# Declare a function named evens_and_odds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
+
+'''def evens_and_odds(r):
+    even_count=0
+    odd_count=0
+    for i in range(r+1):
+        if i==0 or i%2==0:
+            even_count=even_count+1
+        else:
+            odd_count=odd_count+1
+
+    return even_count,odd_count
+
+num=input('Enter the number perameter: ')
+list=evens_and_odds(int(num))
+print(f'The number of evens are {list[0]}')
+print(f'The number of odds are {list[1]}')'''
+
+#Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number
+def fact(num):
+    fact=1
+    if num==0:
+        return 1
+    else:
+        for i in range(1,num+1):
+            fact=fact*i
+    return fact
+
+num=int(input('Enter the number perameter: '))
+print(fact(num))
