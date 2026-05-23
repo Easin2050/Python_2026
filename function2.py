@@ -149,12 +149,35 @@ else:
 
 # Declare a function named sum_of_numbers. It takes a number parameter and it adds all the numbers in that range.
 
-def sum_of_numbers(number):
+'''def sum_of_numbers(number):
     sum=0
     for i in range(number):
         sum=sum+i
     return sum
 
+print(sum_of_numbers(5))'''
 
-print(sum_of_numbers(5))
+# Declare a function named sum_of_odds. It takes a number parameter and it adds all the odd numbers in that range.
 
+'''def sum_of_odds(r):
+    sum=0
+    for i in range(r):
+        if i%2!=0:
+            sum=sum+i
+
+    return sum
+
+num=input('Enter the number perameter: ')
+print(sum_of_odds(int(num)))'''
+
+# Declare a function named sum_of_even. It takes a number parameter and it adds all the even numbers in that - range.
+def sum_of_even(r):
+    sum=0
+    for i in range(r):
+        if i%2==0:
+            sum=sum+i
+
+    return sum
+
+num=input('Enter the number perameter: ')
+print(sum_of_even(int(num)))
