@@ -201,7 +201,7 @@ print(f'The number of evens are {list[0]}')
 print(f'The number of odds are {list[1]}')'''
 
 #Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number
-def fact(num):
+'''def fact(num):
     fact=1
     if num==0:
         return 1
@@ -211,4 +211,97 @@ def fact(num):
     return fact
 
 num=int(input('Enter the number perameter: '))
-print(fact(num))
+print(fact(num))'''
+
+#Call your function is_empty, it takes a parameter and it checks if it is empty or not
+
+'''def is_empty(item):
+    return not bool(item)
+
+print(is_empty([]))
+print(is_empty(''))
+print(is_empty([1,2]))
+print(is_empty(()))
+print(is_empty({}))'''
+
+# Write different functions which take lists. They should calculate_mean, calculate_median, calculate_mode, calculate_range, calculate_variance, calculate_std (standard deviation).
+from math import sqrt
+
+def calculate_mean(user_list):
+    sum=0
+    for item in user_list:
+        sum=sum+int(item)
+    return sum/len(user_list)
+
+def calculate_mode(user_list):
+    fre_dict={}
+    mode_list=[]
+    for item in user_list:
+        if item in fre_dict:
+            fre_dict[item]=fre_dict[item]+1
+        else:
+            fre_dict[item]=1
+    # mode=max(fre_dict,key=fre_dict.get) it give single max value
+    max_freq=max(fre_dict.values())
+    for key,value in fre_dict.items():
+        if value==max_freq:
+            mode_list.append(key)
+    return mode_list
+
+def calculate_median(user_list):
+    numbers = []
+
+    for item in user_list:
+        numbers.append(int(item))
+    sorted_list=sorted(numbers)
+    n=len(sorted_list)
+    if n % 2 != 0:
+        return sorted_list[n // 2]
+    else:
+        return (sorted_list[n//2 - 1] + sorted_list[n//2]) / 2
+
+def calculate_range(user_list):
+    numbers = []
+    for x in user_list:
+        numbers.append(int(x))   
+    sorted_list = sorted(numbers)           
+    return sorted_list[-1] - sorted_list[0] 
+
+def calculate_variance(user_list):
+    sum=0
+    list=[]
+    sum2=0
+    for items in user_list:
+        sum=sum+int(items)
+    mean=sum/len(user_list)
+    for items in user_list:
+        item=int(items)
+        list.append((item-mean)**2)
+    
+    for items in list:
+        sum2=sum2+items
+    return sum2/(len(user_list)-1)
+
+
+def calculate_std(user_list):
+    sum=0
+    list=[]
+    sum2=0
+    for items in user_list:
+        sum=sum+int(items)
+    mean=sum/len(user_list)
+    for items in user_list:
+        item=int(items)
+        list.append((item-mean)**2)
+    
+    for items in list:
+        sum2=sum2+items
+    return sqrt(sum2/(len(user_list)-1))
+
+user_list = input("Enter items separated by spaces: ").split(',')
+print(f'Mean: {calculate_mean(user_list):.2f}')
+print(f'Median: {calculate_median(user_list)}')
+print(f'Mode: {calculate_mode(user_list)}')
+print(f'Range: {calculate_range(user_list)}')
+print(f'Variance: {calculate_variance(user_list):.2f}')
+print(f'Standard deviation: {calculate_std(user_list):.2f}')
