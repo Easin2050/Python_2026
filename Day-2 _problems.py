@@ -148,3 +148,47 @@ import math
 
 # for i in range(1, 6):
 #     print(i, 1, i, i ** 2, i ** 3)
+
+# Geometric calculator:
+
+
+for i in range(0,4,1):
+    if(i==1):
+        print(f'Choose 1 for rectangle')
+    elif(i==2):
+        print(f'Choose 2 for triangle')
+    elif(i==3):
+        print(f'Choose 3 for circle')
+
+user_input=int(input('Enter your choice:'))
+
+if user_input==1:
+    print('You choose rectangle')
+    a=int(input('Enter the height:'))
+    b=int(input('Enter the width:'))
+    print(f'Area of the rectangle {a*b}')
+    print(f'Perameter of the rectangle {2*(a+b)}')
+elif user_input==2:
+    print('You choose triangle')
+    print('Enter the value of the sides:')
+    a=int(input('Enter a:'))
+    b=int(input('Enter b:'))
+    c=int(input('Enter c:'))
+    print(f'perameter of the triangle {a+b+c}')
+    
+    base = float(input('Enter the base: '))
+    height = float(input('Enter the height: '))
+    area = 0.5 * base * height
+    print(f'The area of the triangle is {area:g}')
+elif user_input==3:
+    print('You choose circle')
+    r=float(input('Enter the radious'))
+    import math
+    area=math.pi*math.pow(r,2)
+    print(f'The area of the circle {area:g}')
+    circumference = 2 * math.pi * r
+    print(f'Circumference: {circumference:.2f}')
+else:
+    print('Thank your for visiting the calculator and You did not choose any option')
+
+          
