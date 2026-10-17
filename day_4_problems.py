@@ -119,3 +119,14 @@ company='Coding For All'
 # print(company.endswith('coding'))
 # sentence='   Coding For All      '
 # print(sentence.strip('  '))
+
+# s1='30DaysOfPython'
+# s2='thirty_days_of_python'
+# a=s1.isidentifier()
+# b=s2.isidentifier()
+# print(a)
+# print(b)
+
+list=['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']
+result=','.join(list)
+print(result)
