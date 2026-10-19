@@ -72,7 +72,7 @@ company='Coding For All'
 # print(str.capitalize(company))
 # print(str.title(company))
 # print(str.swapcase(company))
-# print(company[0:1])
+# print(company[:6])
 # sub_string='Coding'
 # print(company.find(sub_string))
 # print(company.index(sub_string))
@@ -80,9 +80,8 @@ company='Coding For All'
 # sentence='Python For Everyone'
 # print(sentence.replace('Everyone','All'))
 
-# sentence="Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon"
-# sentence.split(', ')
-# print(sentence)
+# sentence = "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon"
+# print(sentence.split(', '))
 
 # print(company[0])
 # index=len(company)
@@ -111,14 +110,19 @@ company='Coding For All'
 # print(company.find('F'))
 # print(company.rfind('l'))
 
-# sentence='You cannot end a sentence with because because because is a conjunction'
-# print(sentence.index("because"))
-# print(sentence.rindex('because'))
+# sentence = 'You cannot end a sentence with because because because is a conjunction'
+
+# start = sentence.index('because')
+# end = sentence.index(' is a conjunction')
+
+# result = sentence[start:end]
+
+# print(result)
 
 # print(company.startswith('Coding'))
 # print(company.endswith('coding'))
 # sentence='   Coding For All      '
-# print(sentence.strip('  '))
+# print(sentence.strip(''))
 
 # s1='30DaysOfPython'
 # s2='thirty_days_of_python'
@@ -127,6 +131,128 @@ company='Coding For All'
 # print(a)
 # print(b)
 
-list=['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']
-result=','.join(list)
-print(result)
+# list=['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']
+# result='# '.join(list)
+# print(result)
+
+# print("I am enjoying this challenge.\nI just wonder what is next.")
+
+# print('Name\tAge\tCountry\tCity')
+# print("Asabeneh\t250\tFinland\tHelsinki")
+
+# import math
+# r=10
+# print('Radius = {}'.format(r))
+# # area = 3.14 * radius ** 2
+# print('area = {} * {} ** {}'.format(3.14,r,2))
+# print('The area of a circle with radius {} is {} meters square.'.format(r,3.14 * r ** 2))
+
+# a = 8
+# b = 6
+
+# print('{} + {} = {}'.format(a, b, a + b))
+# print('{} - {} = {}'.format(a, b, a - b))
+# print('{} * {} = {}'.format(a, b, a * b))
+# print('{} / {} = {:.2f}'.format(a, b, a / b)) 
+# print('{} % {} = {}'.format(a, b, a % b))
+# print('{} // {} = {}'.format(a, b, a // b))
+# print('{} ** {} = {}'.format(a, b, a ** b))
+
+# My word game
+
+import random
+
+wordlist = [
+    "python", "developer", "keyboard", "Coffee", "gadget",
+    "creative", "30days", "Bangladesh", "Salary",
+    "programming", "software", "computer", "laptop", "mouse",
+    "monitor", "internet", "technology", "artificial", "intelligence",
+    "student", "teacher", "university", "scholarship", "education",
+    "learning", "practice", "project", "database", "website",
+    "application", "framework", "Django", "JavaScript", "HTML",
+    "CSS", "algorithm", "function", "variable", "string",
+    "engineer", "career", "interview", "company",
+    "office", "manager", "communication", "problem", "solution"
+]
+
+random_word = random.choice(wordlist)
+
+print("Welcome to the Word Guessing Game!")
+print("You have 10 attempts to guess the secret word.")
+print("You have 5 hints available from your friends.")
+print("Let's start!\n")
+
+print("Friend Name\tAge")
+print("Abir\t\t25")
+print("Sakib\t\t27")
+print("Imran\t\t20")
+print("Nokib\t\t26")
+print("Fahad\t\t34")
+
+count = 10
+hint = 5
+attempt = 0
+won = False
+
+while count > 0:
+
+    picked_word = input("\nWrite your word: ").strip()
+    count -= 1
+    attempt += 1
+
+    if picked_word.lower() == random_word.lower():
+        print(f"Congratulations! You guessed the word in {attempt} attempts.")
+        won = True
+        break
+
+    print(f"Wrong guess! Attempts left: {count}")
+    want_hint = input("Do you need a hint? (yes/no): ").strip().lower()
+
+    if want_hint == "yes":
+
+        if hint <= 0:
+            print("You do not have any hints left!")
+            continue
+
+        user_input = input("Friend name: ").strip().lower()
+        user_age = input("Friend age: ").strip()
+
+        if user_input == "abir" and user_age == "25":
+            print(f"The length of the word is: {len(random_word)}")
+
+        elif user_input == "sakib" and user_age == "27":
+            vowels = 0
+
+            for char in random_word.lower():
+                if char in "aeiou":
+                    vowels += 1
+
+            print(f"The number of vowels is: {vowels}")
+
+        elif user_input == "imran" and user_age == "20":
+            middle_index = len(random_word) // 2
+            print(f"The middle character is: {random_word[middle_index]}")
+
+        elif user_input == "nokib" and user_age == "26":
+            print(f"The word ends with: {random_word[-1]}")
+
+        elif user_input == "fahad" and user_age == "34":
+            print(f"The word reversed is: {random_word[::-1]}")
+
+        else:
+            print("Invalid friend name or age.")
+            continue
+
+        hint -= 1
+        print(f"Hints remaining: {hint}")
+
+    elif want_hint == "no":
+        print("Okay, continue guessing!")
+
+    else:
+        print("Please enter yes or no.")
+
+if won:
+    print("\nYou won the game!")
+else:
+    print(f"\nGame over! The correct word was: {random_word}")
